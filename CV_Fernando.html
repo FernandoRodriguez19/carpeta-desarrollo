@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Fernando</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .cv-container {
+            background: white;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            overflow: hidden;
+            max-width: 800px;
+            width: 100%;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            letter-spacing: 1px;
+        }
+        
+        .content {
+            padding: 50px 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 1.8em;
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            font-weight: 600;
+        }
+        
+        .education-item,
+        .hobby-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .education-item:hover,
+        .hobby-item:hover {
+            background: #f0f1ff;
+            transform: translateX(5px);
+        }
+        
+        .education-item h3,
+        .hobby-item h3 {
+            color: #333;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+        
+        .education-item p,
+        .hobby-item p {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        
+        .hobbies-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .hobby-item {
+            text-align: center;
+            border-left: none;
+            border-top: 4px solid #667eea;
+        }
+        
+        .hobby-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .header p {
+                font-size: 1em;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .hobbies-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <div class="header">
+            <h1>FERNANDO</h1>
+            <p>Estudiante de Desarrollo de Videojuegos</p>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">Educación</h2>
+                <div class="education-item">
+                    <h3>Carrera en Desarrollo de Videojuegos</h3>
+                    <p>Universidad Nacional de Rafaela (UNRAF)</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Intereses y Pasiones</h2>
+                <div class="hobbies-grid">
+                    <div class="hobby-item">
+                        <div class="hobby-icon">🎮</div>
+                        <h3>Desarrollo de Videojuegos</h3>
+                        <p>Estudiante apasionado por crear experiencias interactivas</p>
+                    </div>
+                    <div class="hobby-item">
+                        <div class="hobby-icon">⚽</div>
+                        <h3>Fútbol</h3>
+                        <p>Jugador activo con espíritu de equipo</p>
+                    </div>
+                    <div class="hobby-item">
+                        <div class="hobby-icon">🏟️</div>
+                        <h3>River Plate</h3>
+                        <p>Hincha apasionado</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
