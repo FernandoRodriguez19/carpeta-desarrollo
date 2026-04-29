@@ -29,7 +29,7 @@ const mensaje = document.getElementById("mensaje");
 boton.addEventListener("click", function () {
  const valor = input.value;
 
- const numero =Number(valor);
+ const numero =Number (valor);
 
  const resultado = numero + 10;
     mensaje.textContent = "El resultado es: " + resultado;
@@ -39,7 +39,38 @@ boton.addEventListener("click", function () {
  // Mostrar el resultado en pantalla
 });
 
+//ejercicio 4
 
+
+boton.addEventListener("click", function () {
+   let edad = input.value;
+
+const edadMinima = 13;
+
+if (edad >= edadMinima) {
+    console.log("Puedes acceder al contenido");
+} else {
+    console.log("No puedes acceder al contenido");
+}
+});
+
+//ejercicio 5
+
+boton.addEventListener("click", function () {
+    let numero = input.value;
+
+    let vida = input.value;
+
+    if (vida >= 70){
+        console.log("esta en buen estado");
+    }
+    else if (vida >= 30 && vida < 70){
+        console.log("jugador herido");
+    }
+    else {
+        console.log("jugador en estado crítico");
+    }
+})
 
 
 
