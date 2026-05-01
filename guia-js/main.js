@@ -73,4 +73,165 @@ boton.addEventListener("click", function () {
 })
 
 
+//ejercicio 6
+
+let opcion = "iniciar";
+
+switch (opcion) {
+  case "iniciar":
+    console.log("El juego ha comenzado");
+    break;
+
+  case "configuracion":
+    console.log("Accediendo a la configuracion");
+    break;
+
+  case "creditos":
+    console.log("Creditos.");
+    break;
+
+  case "salir":
+    console.log("saliendo del juego");
+    break;
+
+  default:
+    console.log("Opción no válida. Por favor, elige una opción del menú.");
+    break;
+}
+
+//ejercicio 7
+
+for (let i =5; i > 0; i--){
+  console.log(i);
+}
+
+//ejercicio 8
+
+let PuntajeTotal = 0;
+
+for (let ronda = 1; ronda <= 5; ronda++) {
+  PuntajeTotal += ronda;
+}
+console.log("Puntaje total:", PuntajeTotal);
+
+//ejercicio 9
+
+const inventario = ["espada", "pocion", "llave", "escudo", "mapa"];
+console.log("primer objeto:", inventario[0]);
+console.log("cantidad total de objetos:", inventario.length);
+console.log("ultimo objeto:", inventario[inventario.length -1]);
+
+//ejercicio 10
+
+const inventarioNuevo = ["espada", "pocion", "llave", "escudo"];
+
+for (let i = 0; i < inventarioNuevo.length; i++){
+  console.log(inventarioNuevo[i]);
+}
+
+//ejrcicio 11
+
+let mochila = [];
+
+mochila.push("linterna");
+mochila.push("comida");
+mochila.push("mapa");  
+
+mochila.pop();
+console.log(mochila);
+
+//ejercicio 12
+
+let inventarioPuerta = ["espada", "pocion", "llave", "escudo"];
+
+
+  if (inventarioPuerta.includes("llave")) {
+    console.log ("la puerta se abre");
+  }
+    else{ 
+      console.log("necesitas una llave");
+    }
+   
+
+  //ejercicio 13
+
+ function saludarUsuario(nombre) {
+    console.log("Bienvenido, " + nombre);
+}
+saludarUsuario("Ferchito");
+
+//ejercicio 14
+
+function calcularVidaRestante(vida, danio) {
+    let vidaFinal = vida - danio;
+    return vidaFinal;
+
+let resultado = calcularVidaRestante(100, 30);
+
+console.log("Vida restante: " + resultado); 
+}
+
+//ejercicio 15
+
+const sumar = (a, b) => {
+    return a + b;
+};
+console.log(sumar(10, 5)); 
+
+//ejercicio 16
+
+const jugador = {
+  nombre: "Ferchitoo",
+  vida: 100,
+  energia: 80,
+  nivel: 1,
+  inventario: ["llaves", "auriculares"]
+};
+
+console.log("Nombre del jugador:", jugador.nombre);
+console.log("Vida del jugador:", jugador.vida);
+console.log("Energía del jugador:", jugador.energia);
+console.log("Nivel del jugador:", jugador.nivel);
+console.log("Inventario del jugador:", jugador.inventario);
+
+//ejercicio 17
+
+const jugador2 = {
+  nombre: "Ferchitoo",
+  nivel: 1,
+  monedas: 0
+};
+jugador2.nivel = jugador2.nivel + 1; 
+jugador2.monedas = jugador2.monedas + 50;
+console.log(jugador2);
+
+//ejercicio 18
+
+const personajesF = [
+  { nombre: "Ferchitoo", vida: 100, clase: "guerrero", nivel: 3 },
+  { nombre: "Scocco", vida: 120, clase: "mago", nivel: 4 },
+  { nombre: "Chiki", vida: 90, clase: "ladron", nivel: 2 }
+];
+
+  personajesF.forEach((personaje) => {
+    console.log(`El personaje ${personaje.nombre} es un ${personaje.clase} de nivel ${personaje.nivel}.`);
+});
+ 
+//ejercicio 19
+
+const personajesFuertes = personajes.filter((personaje) => {
+return personajesF.nivel >= 3;
+
+console.log(personajesFuertes);
+});
+
+//ejercicio 20
+
+
+const nombres = personajes.map((personaje) => {
+  
+    return personaje.nombre;
+});
+
+console.log(nombres); 
 
