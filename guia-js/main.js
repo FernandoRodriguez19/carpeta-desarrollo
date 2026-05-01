@@ -219,7 +219,7 @@ const personajesF = [
  
 //ejercicio 19
 
-const personajesFuertes = personajes.filter((personaje) => {
+const personajesFuertes = personajesF.filter((personaje) => {
 return personajesF.nivel >= 3;
 
 console.log(personajesFuertes);
@@ -234,4 +234,71 @@ const nombres = personajes.map((personaje) => {
 });
 
 console.log(nombres); 
+
+//ejercicio 21 
+
+const personajeEncontrado = personajesF.find((personaje) => {
+    return personaje.nombre === "Scocco";
+    });
+    console.log(personajeEncontrado);
+
+    //ejercicio 22
+
+    const vidaTotal = personajesF.reduce((total, personaje) => {
+    return total + personaje.vida;
+}, 0);
+
+console.log("Vida total de los personajes:", vidaTotal);
+
+//ejercicio 23
+
+const textoBienvenida = document.getElementById("mensaje");
+textoBienvenida.textContent = "Bienvenido a la guía de JavaScript";
+textoBienvenida .style.color = "green"; 
+
+//ejercicio 24
+
+const botonazo = document.getElementById("btn");
+const mensajito = document.getElementById("mensaje");
+
+let puntos = 0;
+
+botonazo.addEventListener("click", function () {
+  puntos += 10;
+  mensajito.textContent = "Puntos: " + puntos;
+});
+
+//ejercicio 25
+
+const entrada = document.getElementById("dato");
+const botoncito = document.getElementById("btn");
+const mensajero = document.getElementById("mensaje");
+
+botoncito.addEventListener("click", function () {
+  const valor = entrada.value;
+
+  if (valor.trim() === "") {
+    mensajero.textContent = "Por favor, ingresa un valor válido.";
+    mensajero.style.color = "green";
+  } else {
+    mensajero.textContent = "Valor ingresado: " + valor;
+    mensajero.style.color = "red";
+  }   
+
+});
+
+//ejercicio 26
+
+const jugador3 = {
+  nombre: "Ferchitoo",
+  vida: 100,
+};
+localStorage.setItem("datosJugador", JSON.stringify(jugador));
+
+const jugadorRecuperado = JSON.parse(localStorage.getItem("datosJugador"));
+
+console.log("Datos recuperados:", jugadorRecuperado);
+console.log("Nombre del jugador:", jugadorRecuperado.nombre);
+
+//ejercicio 27
 
